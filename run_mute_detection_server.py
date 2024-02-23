@@ -66,8 +66,8 @@ async def request_logger(request, handler):
 def main():
     app = web.Application()
 
-    app.middlewares.append(authenticate)
     app.middlewares.append(request_logger)
+    app.middlewares.append(authenticate)
 
     config = settings.get_config()
     app.router.add_post(config["service"]["route"]["pingpong"], ping)

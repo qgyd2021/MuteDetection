@@ -11,7 +11,7 @@ git clone https://github.com/qgyd2021/MuteDetection.git
 1.克隆代码
 
 ```text
-docker build -t mute_detection:v20240223_0936 .
+docker build -t mute_detection:v20240223_0943 .
 ```
 1.创建镜像
 
@@ -19,7 +19,7 @@ docker build -t mute_detection:v20240223_0936 .
 docker run -itd \
 --name MuteDetection \
 -p 30090:30090 \
-mute_detection:v20240223_0936 \
+mute_detection:v20240223_0943 \
 /bin/bash
 ```
 1.启动容器
