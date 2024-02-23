@@ -8,4 +8,4 @@ RUN pip install --no-cache-dir --upgrade -r /code/requirements.txt
 
 COPY . .
 
-CMD ["python3", "run_voicemail_detection_server.py"]
+CMD ["python3", "run_mute_detection_server.py"]
