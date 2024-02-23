@@ -1,0 +1,12 @@
+
+.git/
+.idea/
+
+**/flagged/
+**/log/
+**/logs/
+**/__pycache__/
+
+conf/
+data/
+trained_models/
