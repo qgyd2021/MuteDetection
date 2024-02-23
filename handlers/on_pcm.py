@@ -46,8 +46,8 @@ async def handle_on_pcm(request):
     pcm_in_base64 = js["pcmInBase64"]
     ext = js.get("ext")
 
-    base64byte = pcm_in_base64.encode("utf-8")
-    wav_bytes = base64.b64decode(base64byte)
+    # base64byte = pcm_in_base64.encode("utf-8")
+    # wav_bytes = base64.b64decode(base64byte)
     # signal = np.frombuffer(wav_bytes, dtype=np.int16)
     stop_flag = 0
 
