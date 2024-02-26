@@ -2,6 +2,7 @@
 # coding=utf-8
 import asyncio
 import logging
+import multiprocessing
 import os
 import time
 
@@ -58,7 +59,7 @@ async def request_logger(request, handler):
 
     cost = time.time() - start_time
 
-    # http_logger.info(f"{method}|{url}|{http_status}|{cost:.3f}s|{request_body}|{response_body}")
+    http_logger.info(f"{method}|{url}|{http_status}|{cost:.3f}s|{request_body}|{response_body}")
 
     return response
 

@@ -91,6 +91,7 @@ class MuteDetectionProcessContext(object):
         msg = "on_hangup, call_id: {}; ts: {}".format(self.call_id, ts)
         main_logger.info(msg)
         self.on_hangup_ts = ts
+        self.stop_flag = 1
         return ts
 
     def update(self, pcm_in_base64: str):
@@ -144,6 +145,8 @@ class MuteDetectionProcessContext(object):
 
             if self.duration >= self.thresholds[-1]["duration"]:
                 self.stop_flag = 1
+
+        self.signal_cache = self.signal_cache[-rest:] if rest != 0 else np.zeros(shape=(0,), dtype=np.int16)
         return None
 
 
